@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Weather App</title>
+
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -20,11 +22,15 @@
             type="text"
             id="input"
             placeholder="Enter city name..."
+            autocomplete="off"
             required
           />
 
-          <button type="submit">Search</button>
+          <button type="submit" id="search-btn">Search</button>
         </form>
+
+        <!-- Error message -->
+        <p id="error-message"></p>
 
         <div class="weather-result">
           <div class="location">
@@ -34,11 +40,14 @@
 
           <div class="temperature">
             <span id="temp"></span>
-            <span></span>
           </div>
 
           <div class="condition">
-            <img id="weather-icon" src="" alt="☀️" />
+            <img
+              id="weather-icon"
+              src="https://www.pixsector.com/cache/afa23d3a/av1c12f667576e96088e6.png"
+              alt="Weather icon"
+            />
             <p id="condition"></p>
           </div>
 
